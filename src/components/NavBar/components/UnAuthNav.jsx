@@ -1,16 +1,17 @@
 import { HiMenu } from 'react-icons/hi'
 
-import UserIcon from './UserIcon'
-
-const AuthNav = ({ menuOpen, setMenuOpen, navLinks }) => {
+const UnAuthNav = ({ menuOpen, setMenuOpen, unAuthUser }) => {
   return (
     <>
       <div className="lg:block hidden">
-        <ul className="flex items-center space-x-5">{navLinks}</ul>
+        <ul className="flex items-center space-x-5">{unAuthUser}</ul>
       </div>
-
-      <UserIcon />
-
+      <button
+        type="button"
+        className="p-1 px-2.5 rounded-full bg-red-500 text-white font-medium"
+      >
+        Sign In
+      </button>
       <div className="lg:hidden block flex items-center">
         {/*Hamburger Menu*/}
         <button
@@ -31,4 +32,4 @@ const AuthNav = ({ menuOpen, setMenuOpen, navLinks }) => {
   )
 }
 
-export default AuthNav
+export default UnAuthNav

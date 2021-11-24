@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
-import Logo from './Logo'
-import AuthNav from './AuthNav'
+import Logo from './components/Logo'
+import UnAuthNav from './components/UnAuthNav'
 
-const pages = ['Manager', 'Charts', 'Categories']
-const navLinks = pages.map((page) => (
+const unAuthPages = ['Welcome', 'Features', 'About']
+const unAuthUser = unAuthPages.map((page) => (
   <li key={page}>
-    <NavLink to={`./${page.toLowerCase()}`} className="font-medium">
+    <NavLink to={`../${page.toLowerCase()}`} className="font-medium">
       {page}
     </NavLink>
   </li>
 ))
 
-const NavBar = () => {
+const SignedOut = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -24,20 +24,21 @@ const NavBar = () => {
             <Logo />
           </section>
           <section className="flex items-center space-x-5">
-            <AuthNav
+            <UnAuthNav
               menuOpen={menuOpen}
               setMenuOpen={setMenuOpen}
-              navLinks={navLinks}
+              unAuthUser={unAuthUser}
             />
           </section>
         </main>
       </section>
-
       {/*Mobile Menu*/}
       {menuOpen && (
         <section className="lg:hidden block bg-yellow-50 py-4">
           <div>
-            <ul className="flex flex-col space-y-5 items-center">{navLinks}</ul>
+            <ul className="flex flex-col space-y-5 items-center">
+              {unAuthUser}
+            </ul>
           </div>
         </section>
       )}
@@ -45,4 +46,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default SignedOut
