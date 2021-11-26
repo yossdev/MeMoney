@@ -1,5 +1,5 @@
-const Index = () => {
+const Charts = () => {
   return <div>Charts Component</div>
 }
 
-export default Index
+export default Charts

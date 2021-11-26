@@ -1,4 +1,6 @@
 import { HiOutlinePlusSm } from 'react-icons/hi'
+import DatesDropdown from '../DatesDropdown'
+import FilterMonth from '../DatesDropdown/FilterMonth'
 
 const ManagerBar = () => {
   return (
@@ -6,12 +8,16 @@ const ManagerBar = () => {
       <section className="py-5" />
       <figure className="flex justify-between items-center bg-LightYellow2 px-5 py-3 my-5 rounded-xl">
         <button type="button" aria-label="add transactions modal">
-          <h2 className="text-BlackGrey2">Budgets</h2>
+          <h2 className="text-BlackGrey2">My Budgets</h2>
         </button>
 
-        <button type="button" aria-label="add transactions modal">
-          <h2 className="text-BlackGrey2">Date</h2>
-        </button>
+        {/*<button type="button" aria-label="add transactions modal">*/}
+        {/*  <h2 className="text-BlackGrey2">Date</h2>*/}
+        {/*</button>*/}
+
+        <FilterMonth />
+
+        <DatesDropdown />
 
         <button type="button" aria-label="add transactions modal">
           <HiOutlinePlusSm

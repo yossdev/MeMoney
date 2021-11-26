@@ -1,7 +1,7 @@
 import SignedOut from '../../components/NavBar/SignedOut'
 // import Login from '../../OAuth/SignIn'
 
-const Index = () => {
+const LandingPage = () => {
   document.title = 'Welcome'
   return (
     <>
@@ -11,4 +11,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default LandingPage

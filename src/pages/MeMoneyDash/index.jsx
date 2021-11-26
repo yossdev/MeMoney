@@ -1,7 +1,7 @@
 import SignedIn from '../../components/NavBar/SignedIn'
 import Manager from './Manager'
 
-const Index = () => {
+const MeMoneyDash = () => {
   return (
     <>
       <SignedIn />
@@ -10,4 +10,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default MeMoneyDash
