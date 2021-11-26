@@ -1,6 +1,6 @@
-import ManagerBar from '../../components/ManagerBar'
-import Summary from '../../components/Summary'
-import ItemsLists from '../../components/ItemsLists'
+import ManagerBar from '../../components/Transactions/ManagerBar'
+import Summary from '../../components/Transactions/Summary'
+import TransactionList from '../../components/Transactions/TransactionList'
 
 const Manager = () => {
   document.title = 'Manager'
@@ -9,7 +9,7 @@ const Manager = () => {
       <div className="container mx-auto px-4">
         <ManagerBar />
         <Summary />
-        <ItemsLists />
+        <TransactionList />
       </div>
     </>
   )

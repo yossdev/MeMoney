@@ -1,17 +1,8 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
 
 import Logo from './components/Logo'
 import UnAuthNav from './components/UnAuthNav'
-
-const unAuthPages = ['Welcome', 'Features', 'About']
-const unAuthUser = unAuthPages.map((page) => (
-  <li key={page}>
-    <NavLink to={`../${page.toLowerCase()}`} className="font-medium">
-      {page}
-    </NavLink>
-  </li>
-))
+import { NavLink } from 'react-router-dom'
 
 const SignedOut = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -24,20 +15,30 @@ const SignedOut = () => {
             <Logo />
           </section>
           <section className="flex items-center space-x-5">
-            <UnAuthNav
-              menuOpen={menuOpen}
-              setMenuOpen={setMenuOpen}
-              unAuthUser={unAuthUser}
-            />
+            <UnAuthNav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           </section>
         </main>
       </section>
       {/*Mobile Menu*/}
       {menuOpen && (
-        <section className="lg:hidden block bg-yellow-50 py-4">
+        <section className="lg:hidden block bg-LightYellow1 py-4">
           <div>
             <ul className="flex flex-col space-y-5 items-center">
-              {unAuthUser}
+              <li>
+                <NavLink to="/" className="font-medium text-BlackGrey2">
+                  Welcome
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="#features" className="font-medium text-BlackGrey2">
+                  Features
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about" className="font-medium text-BlackGrey2">
+                  About
+                </NavLink>
+              </li>
             </ul>
           </div>
         </section>
