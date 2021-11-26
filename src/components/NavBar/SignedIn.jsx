@@ -4,10 +4,13 @@ import { NavLink } from 'react-router-dom'
 import Logo from './components/Logo'
 import AuthNav from './components/AuthNav'
 
-const authPages = ['Manager', 'Charts', 'Categories', 'Export']
+const authPages = ['Manager', 'Charts']
 const authUser = authPages.map((page) => (
   <li key={page}>
-    <NavLink to={`../${page.toLowerCase()}`} className="font-medium">
+    <NavLink
+      to={`/${page.toLowerCase()}`}
+      className="font-medium text-BlackGrey2"
+    >
       {page}
     </NavLink>
   </li>
@@ -34,7 +37,7 @@ const SignedIn = () => {
       </section>
       {/*Mobile Menu*/}
       {menuOpen && (
-        <section className="lg:hidden block bg-yellow-50 py-4">
+        <section className="lg:hidden block bg-LightYellow1 py-4">
           <div>
             <ul className="flex flex-col space-y-5 items-center">{authUser}</ul>
           </div>

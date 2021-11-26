@@ -16,7 +16,7 @@ const AuthNav = ({ menuOpen, setMenuOpen, authUser }) => {
         <button
           type="button"
           aria-label="Toggle mobile menu"
-          className="focus:outline-none rounded focus:ring ring-red-600 ring-opacity-50"
+          className="focus:outline-none rounded focus:ring ring-Red1 ring-opacity-50"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <HiMenu
