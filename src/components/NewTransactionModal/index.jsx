@@ -1,5 +1,5 @@
-const Index = () => {
-  return <div>Add Transaction Modal</div>
+const NewTransactionModal = () => {
+  return <div>New Transaction Modal</div>
 }
 
-export default Index
+export default NewTransactionModal

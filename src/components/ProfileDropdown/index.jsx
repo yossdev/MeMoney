@@ -1,6 +1,6 @@
 import Avatar from '../NavBar/components/Avatar'
 
-const Index = () => {
+const ProfileDropdown = () => {
   return (
     <div>
       <div>
@@ -16,4 +16,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default ProfileDropdown

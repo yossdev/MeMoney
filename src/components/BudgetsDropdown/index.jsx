@@ -1,5 +1,5 @@
-const Index = () => {
+const BudgetsDropdown = () => {
   return <div>Budgets Dropdown</div>
 }
 
-export default Index
+export default BudgetsDropdown
