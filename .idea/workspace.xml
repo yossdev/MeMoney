@@ -5,44 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37c20400-2a27-432f-a848-413a6c0e3151" name="Changes" comment=".idea">
-      <change afterPath="$PROJECT_DIR$/src/OAuth/SignInWithGoogle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OAuth/SignOut.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OAuth/utils/refreshTokenSetup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OAuth/utils/verifyToken.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfileDropdown/ProfileDropdownButton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hooks/useComponentVisible.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FilterMonth/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OAuth/OAuthVerify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OAuth/SignIn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BudgetsDropdown/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BudgetsDropdown/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Charts/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Charts/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DatesDropdown/FilterMonth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DatesDropdown/FilterMonth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DatesDropdown/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DatesDropdown/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DatesDropdown/FilterMonth.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DatesDropdown/index.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/EditTransactionModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditTransactionModal/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/SignedIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/SignedIn.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NavBar/SignedOut.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/SignedOut.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/components/AuthNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/components/AuthNav.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/components/Avatar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/components/Avatar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/components/Logo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/components/Logo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NavBar/components/UnAuthNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/components/UnAuthNav.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NewTransactionModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewTransactionModal/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ProfileDropdown/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileDropdown/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Transactions/ItemList/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/ItemList/Item.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Transactions/ItemList/ItemHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/ItemList/ItemHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Transactions/ItemList/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/ItemList/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Transactions/ManagerBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/ManagerBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Transactions/Summary.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/Summary.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Transactions/TransactionList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/TransactionList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Errors/Page404.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Errors/Page404.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/LandingPage/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MeMoneyDash/Charts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MeMoneyDash/Charts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MeMoneyDash/Manager.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MeMoneyDash/Manager.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MeMoneyDash/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MeMoneyDash/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ProfilePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfilePage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,15 +72,16 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\Alterra Fullstack Engineering\Frontend\Final Project\memoney\node_modules\prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Alterra Fullstack Engineering\Frontend\Final Project\memoney\src\components\AddTransactionModal" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Alterra Fullstack Engineering\Frontend\Final Project\memoney\src\components\ProfileDropdown" />
+      <recent name="D:\Alterra Fullstack Engineering\Frontend\Final Project\memoney\src\components\Utils" />
       <recent name="D:\Alterra Fullstack Engineering\Frontend\Final Project\memoney\src\components" />
+      <recent name="D:\Alterra Fullstack Engineering\Frontend\Final Project\memoney\src\components\ProfileDropdown" />
       <recent name="D:\Alterra Fullstack Engineering\Frontend\Final Project\memoney\src\components\Transactions" />
       <recent name="D:\Alterra Fullstack Engineering\Frontend\Final Project\memoney\src\OAuth" />
     </key>

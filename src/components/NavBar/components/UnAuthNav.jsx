@@ -13,11 +13,6 @@ const UnAuthNav = ({ menuOpen, setMenuOpen }) => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="#features" className="font-medium text-BlackGrey2">
-              Features
-            </NavLink>
-          </li>
-          <li>
             <NavLink to="/about" className="font-medium text-BlackGrey2">
               About
             </NavLink>

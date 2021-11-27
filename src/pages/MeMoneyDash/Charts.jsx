@@ -1,6 +1,13 @@
+import SignedIn from '../../components/NavBar/SignedIn'
+
 const Charts = () => {
   document.title = 'Charts'
-  return <div>Charts Page</div>
+  return (
+    <>
+      <SignedIn />
+      <div>Charts Page</div>
+    </>
+  )
 }
 
 export default Charts
