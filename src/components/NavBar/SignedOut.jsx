@@ -1,8 +1,8 @@
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 import Logo from './components/Logo'
 import UnAuthNav from './components/UnAuthNav'
-import { NavLink } from 'react-router-dom'
 
 const SignedOut = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -27,11 +27,6 @@ const SignedOut = () => {
               <li>
                 <NavLink to="/" className="font-medium text-BlackGrey2">
                   Welcome
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#features" className="font-medium text-BlackGrey2">
-                  Features
                 </NavLink>
               </li>
               <li>

@@ -1,5 +1,6 @@
 import Avatar from '../NavBar/components/Avatar'
 import SignOut from '../../OAuth/SignOut'
+import { Link } from 'react-router-dom'
 
 const ProfileDropdown = () => {
   return (
@@ -12,7 +13,9 @@ const ProfileDropdown = () => {
       </div>
       <hr className="bg-BlackGrey1 h-0.5" />
       <div className="grid justify-items-center py-2.5">
-        <h2 className="text-BlackGrey1 font-semibold py-2">Profile</h2>
+        <Link to="/profile">
+          <h2 className="text-BlackGrey1 font-semibold py-2">Profile</h2>
+        </Link>
         <SignOut />
       </div>
     </div>

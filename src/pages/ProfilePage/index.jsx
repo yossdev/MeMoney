@@ -1,6 +1,13 @@
+import SignedIn from '../../components/NavBar/SignedIn'
+
 const ProfilePage = () => {
   document.title = 'Profile'
-  return <div>Profile Page</div>
+  return (
+    <>
+      <SignedIn />
+      <div>Profile Page</div>
+    </>
+  )
 }
 
 export default ProfilePage

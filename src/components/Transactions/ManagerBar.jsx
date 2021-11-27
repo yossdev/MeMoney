@@ -1,8 +1,12 @@
 import { HiOutlinePlusSm } from 'react-icons/hi'
-// import DatesDropdown from '../DatesDropdown'
-import FilterMonth from '../DatesDropdown/FilterMonth'
+import FilterMonth from '../FilterMonth'
+import NewTransactionModal from '../NewTransactionModal'
+import useComponentVisible from '../../Hooks/useComponentVisible'
 
 const ManagerBar = () => {
+  const { ref, isComponentVisible, setIsComponentVisible } =
+    useComponentVisible(false)
+
   return (
     <>
       <section className="py-5" />
@@ -11,15 +15,13 @@ const ManagerBar = () => {
           <h2 className="text-BlackGrey2">My Budgets</h2>
         </button>
 
-        {/*<button type="button" aria-label="add transactions modal">*/}
-        {/*  <h2 className="text-BlackGrey2">Date</h2>*/}
-        {/*</button>*/}
-
         <FilterMonth />
 
-        {/*<DatesDropdown />*/}
-
-        <button type="button" aria-label="add transactions modal">
+        <button
+          type="button"
+          aria-label="add transactions modal"
+          onClick={setIsComponentVisible}
+        >
           <HiOutlinePlusSm
             color="white"
             size="2rem"
@@ -27,6 +29,12 @@ const ManagerBar = () => {
           />
         </button>
       </figure>
+
+      <div ref={ref}>
+        {isComponentVisible && (
+          <NewTransactionModal setIsComponentVisible={setIsComponentVisible} />
+        )}
+      </div>
     </>
   )
 }
