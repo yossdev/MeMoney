@@ -1,5 +1,6 @@
 import { HiMenu } from 'react-icons/hi'
 import { NavLink } from 'react-router-dom'
+import SignInWithGoogle from '../../../OAuth/SignInWithGoogle'
 
 const UnAuthNav = ({ menuOpen, setMenuOpen }) => {
   return (
@@ -24,12 +25,7 @@ const UnAuthNav = ({ menuOpen, setMenuOpen }) => {
         </ul>
       </div>
 
-      <button
-        type="button"
-        className="p-1 px-2.5 rounded-full bg-Red1 text-WhiteBG1 font-medium text-WhiteBG1"
-      >
-        Sign In
-      </button>
+      <SignInWithGoogle />
 
       <div className="lg:hidden block flex items-center">
         {/*Hamburger Menu*/}

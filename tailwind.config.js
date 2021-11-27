@@ -20,6 +20,9 @@ module.exports = {
     },
     extend: {
       boxShadow: ['active'],
+      maxWidth: {
+        1: '35px',
+      },
     },
   },
   variants: {
