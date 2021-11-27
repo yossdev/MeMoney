@@ -4,26 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c20400-2a27-432f-a848-413a6c0e3151" name="Changes" comment=".idea">
-      <change afterPath="$PROJECT_DIR$/src/Hooks/useComponentVisible.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FilterMonth/index.jsx" afterDir="false" />
+    <list default="true" id="37c20400-2a27-432f-a848-413a6c0e3151" name="Changes" comment="integrate MVP component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DatesDropdown/FilterMonth.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DatesDropdown/index.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/EditTransactionModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditTransactionModal/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/SignedOut.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/SignedOut.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/components/UnAuthNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/components/UnAuthNav.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NewTransactionModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewTransactionModal/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProfileDropdown/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileDropdown/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Transactions/ItemList/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/ItemList/Item.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Transactions/ManagerBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/ManagerBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Errors/Page404.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Errors/Page404.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MeMoneyDash/Charts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MeMoneyDash/Charts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProfilePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfilePage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +97,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="dev" />
                       </list>
                     </value>
                   </entry>
@@ -129,7 +113,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value=".idea" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
+    <MESSAGE value="integrate MVP component" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrate MVP component" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
