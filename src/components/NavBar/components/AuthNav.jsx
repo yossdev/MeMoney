@@ -1,15 +1,25 @@
 import { HiMenu } from 'react-icons/hi'
 
-import Avatar from './Avatar'
+import ProfileDropdownButton from '../../ProfileDropdown/ProfileDropdownButton'
 
-const AuthNav = ({ menuOpen, setMenuOpen, authUser }) => {
+const AuthNav = ({
+  menuOpen,
+  setMenuOpen,
+  authUser,
+  avatarOpen,
+  setAvatarOpen,
+}) => {
   return (
     <>
       <div className="lg:block hidden">
         <ul className="flex items-center space-x-5">{authUser}</ul>
       </div>
 
-      <Avatar />
+      <ProfileDropdownButton
+        avatarOpen={avatarOpen}
+        setAvatarOpen={setAvatarOpen}
+        setMenuOpen={setMenuOpen}
+      />
 
       <div className="lg:hidden block flex items-center">
         {/*Hamburger Menu*/}

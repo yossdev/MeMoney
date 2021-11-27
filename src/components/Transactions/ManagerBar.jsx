@@ -1,5 +1,5 @@
 import { HiOutlinePlusSm } from 'react-icons/hi'
-import DatesDropdown from '../DatesDropdown'
+// import DatesDropdown from '../DatesDropdown'
 import FilterMonth from '../DatesDropdown/FilterMonth'
 
 const ManagerBar = () => {
@@ -17,7 +17,7 @@ const ManagerBar = () => {
 
         <FilterMonth />
 
-        <DatesDropdown />
+        {/*<DatesDropdown />*/}
 
         <button type="button" aria-label="add transactions modal">
           <HiOutlinePlusSm
