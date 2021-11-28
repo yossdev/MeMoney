@@ -17,7 +17,7 @@ const EditTransactionModal = ({ setIsComponentVisible, transaction }) => {
     setType(!type)
   }
 
-  console.log(transaction)
+  // console.log(transaction)
 
   return (
     <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-BlackGrey1 bg-opacity-50">

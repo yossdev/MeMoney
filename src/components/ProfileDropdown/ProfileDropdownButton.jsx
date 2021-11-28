@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import Avatar from '../NavBar/components/Avatar'
 
 const ProfileDropdownButton = ({ avatarOpen, setAvatarOpen, setMenuOpen }) => {
