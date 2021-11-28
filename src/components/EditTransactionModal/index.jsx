@@ -17,7 +17,7 @@ const EditTransactionModal = ({ setIsComponentVisible, transaction }) => {
     setType(!type)
   }
 
-  console.log(transaction)
+  // console.log(transaction)
 
   return (
     <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-BlackGrey1 bg-opacity-50">
@@ -29,16 +29,16 @@ const EditTransactionModal = ({ setIsComponentVisible, transaction }) => {
             <tr>
               <td className="w-auto px-3">Category</td>
               <td className="w-full">
-                <div className="p-2">
+                <div className="md:flex grid p-2">
                   <select
-                    className="bg-WhiteBG2 rounded-md px-2 py-1.5"
+                    className="bg-WhiteBG2 rounded-md px-2 py-1.5 mx-1 my-2"
                     onChange={handleSelect}
                   >
                     <option value="Income">Income</option>
                     <option value="Expenses">Expenses</option>
                   </select>
 
-                  <select className="bg-WhiteBG2 rounded-md px-2 py-1.5 ml-3">
+                  <select className="bg-WhiteBG2 rounded-md px-2 py-1.5 mx-1 my-2">
                     {type ? (
                       <>
                         <option value="Salary">Salary</option>
@@ -63,7 +63,7 @@ const EditTransactionModal = ({ setIsComponentVisible, transaction }) => {
                   <input
                     maxLength="35"
                     placeholder="Enter here"
-                    className="w-full bg-WhiteBG2 p-2"
+                    className="w-full bg-WhiteBG2 p-2 mx-1"
                   />
                 </div>
               </td>
@@ -77,7 +77,7 @@ const EditTransactionModal = ({ setIsComponentVisible, transaction }) => {
                     min="1"
                     maxLength="8"
                     placeholder="Enter here"
-                    className="w-full bg-WhiteBG2 p-2"
+                    className="w-full bg-WhiteBG2 p-2 mx-1"
                   />
                 </div>
               </td>
@@ -88,7 +88,7 @@ const EditTransactionModal = ({ setIsComponentVisible, transaction }) => {
                 <div className="p-2">
                   <input
                     type="date"
-                    className="w-full bg-WhiteBG2 p-2"
+                    className="w-full bg-WhiteBG2 p-2 mx-1"
                     onChange={handleDate}
                   />
                 </div>

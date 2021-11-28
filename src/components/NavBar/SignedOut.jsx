@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import Logo from './components/Logo'
 import UnAuthNav from './components/UnAuthNav'
 
-const SignedOut = () => {
+const SignedOut = (props) => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -15,7 +15,11 @@ const SignedOut = () => {
             <Logo />
           </section>
           <section className="flex items-center space-x-5">
-            <UnAuthNav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <UnAuthNav
+              menuOpen={menuOpen}
+              setMenuOpen={setMenuOpen}
+              auth={props}
+            />
           </section>
         </main>
       </section>
@@ -29,6 +33,16 @@ const SignedOut = () => {
                   Welcome
                 </NavLink>
               </li>
+              {props.isAuthenticated && (
+                <li>
+                  <NavLink
+                    to="/manager"
+                    className="font-medium text-BlackGrey2"
+                  >
+                    Manager
+                  </NavLink>
+                </li>
+              )}
               <li>
                 <NavLink to="/about" className="font-medium text-BlackGrey2">
                   About

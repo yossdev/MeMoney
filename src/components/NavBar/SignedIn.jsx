@@ -1,23 +1,11 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
 
 import Logo from './components/Logo'
 import AuthNav from './components/AuthNav'
 import ProfileDropdown from '../ProfileDropdown'
+import { NavLink } from 'react-router-dom'
 
-const authPages = ['Manager', 'Charts']
-const authUser = authPages.map((page) => (
-  <li key={page}>
-    <NavLink
-      to={`/${page.toLowerCase()}`}
-      className="font-medium text-BlackGrey2"
-    >
-      {page}
-    </NavLink>
-  </li>
-))
-
-const SignedIn = () => {
+const SignedIn = (props) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [avatarOpen, setAvatarOpen] = useState(false)
 
@@ -34,7 +22,6 @@ const SignedIn = () => {
                 <AuthNav
                   menuOpen={menuOpen}
                   setMenuOpen={setMenuOpen}
-                  authUser={authUser}
                   avatarOpen={avatarOpen}
                   setAvatarOpen={setAvatarOpen}
                 />
@@ -46,14 +33,29 @@ const SignedIn = () => {
             <section className="lg:hidden block bg-LightYellow1 py-4">
               <div>
                 <ul className="flex flex-col space-y-5 items-center">
-                  {authUser}
+                  <li>
+                    <NavLink
+                      to="/manager"
+                      className="font-medium text-BlackGrey2"
+                    >
+                      Manager
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="charts"
+                      className="font-medium text-BlackGrey2"
+                    >
+                      Charts
+                    </NavLink>
+                  </li>
                 </ul>
               </div>
             </section>
           )}
         </div>
         <div className="container flex justify-end mx-auto my-0.5">
-          {avatarOpen && <ProfileDropdown />}
+          {avatarOpen && <ProfileDropdown auth={props} />}
         </div>
       </nav>
     </>

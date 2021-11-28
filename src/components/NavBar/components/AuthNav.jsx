@@ -1,18 +1,24 @@
 import { HiMenu } from 'react-icons/hi'
 
 import ProfileDropdownButton from '../../ProfileDropdown/ProfileDropdownButton'
+import { NavLink } from 'react-router-dom'
 
-const AuthNav = ({
-  menuOpen,
-  setMenuOpen,
-  authUser,
-  avatarOpen,
-  setAvatarOpen,
-}) => {
+const AuthNav = ({ menuOpen, setMenuOpen, avatarOpen, setAvatarOpen }) => {
   return (
     <>
       <div className="lg:block hidden">
-        <ul className="flex items-center space-x-5">{authUser}</ul>
+        <ul className="flex items-center space-x-5">
+          <li>
+            <NavLink to="/manager" className="font-medium text-BlackGrey2">
+              Manager
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="charts" className="font-medium text-BlackGrey2">
+              Charts
+            </NavLink>
+          </li>
+        </ul>
       </div>
 
       <ProfileDropdownButton

@@ -1,12 +1,6 @@
-import SignedOut from '../../components/NavBar/SignedOut'
-
 const About = () => {
   document.title = 'About'
-  return (
-    <>
-      <SignedOut />
-    </>
-  )
+  return <div>About</div>
 }
 
 export default About
