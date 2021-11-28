@@ -5,38 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37c20400-2a27-432f-a848-413a6c0e3151" name="Changes" comment="fix padding/margin modal">
-      <change afterPath="$PROJECT_DIR$/Todo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Auth0/auth0Provider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jwt/inMemoryJWT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/LandingPage/Welcome.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.webmanifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hooks/useComponentVisible.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hooks/useComponentVisible.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditTransactionModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditTransactionModal/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilterMonth/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilterMonth/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/SignedIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/SignedIn.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/SignedOut.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/SignedOut.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/components/AuthNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/components/AuthNav.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/components/UnAuthNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/components/UnAuthNav.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProfileDropdown/ProfileDropdownButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileDropdown/ProfileDropdownButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProfileDropdown/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileDropdown/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Transactions/ItemList/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/ItemList/Item.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Transactions/ManagerBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/ManagerBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Transactions/Summary.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/Summary.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Errors/Page404.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Errors/Page404.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MeMoneyDash/Charts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MeMoneyDash/Charts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MeMoneyDash/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MeMoneyDash/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProfilePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfilePage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +34,7 @@
     <bower.json value="" />
   </component>
   <component name="ProjectId" id="21P4zf04sVtkBL8Y4CQVz2oEwQU" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
