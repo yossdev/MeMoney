@@ -32,7 +32,7 @@ const LandingPage = () => {
         })
         // store accessToken
         dispatch(storeJwt(accessToken))
-        localStorage.setItem('jwtToken', accessToken)
+        // localStorage.setItem('jwtToken', accessToken)
       } catch (e) {
         console.log(e.message)
       }

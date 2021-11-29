@@ -32,7 +32,7 @@ const UnAuthNav = ({ menuOpen, setMenuOpen, auth }) => {
         <button
           type="button"
           className="p-1 px-2.5 rounded-full bg-Red1 text-WhiteBG1 font-medium text-WhiteBG1"
-          onClick={loginWithRedirect}
+          onClick={() => loginWithRedirect()}
         >
           Sign In
         </button>
@@ -41,7 +41,7 @@ const UnAuthNav = ({ menuOpen, setMenuOpen, auth }) => {
         <button
           type="button"
           className="p-1 px-2.5 rounded-full bg-Red1 text-WhiteBG1 font-medium text-WhiteBG1"
-          onClick={logout}
+          onClick={() => logout()}
         >
           Sign Out
         </button>
