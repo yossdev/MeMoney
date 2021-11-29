@@ -3,13 +3,18 @@ import { HiMenu } from 'react-icons/hi'
 import ProfileDropdownButton from '../../ProfileDropdown/ProfileDropdownButton'
 import { NavLink } from 'react-router-dom'
 
-const AuthNav = ({ menuOpen, setMenuOpen, avatarOpen, setAvatarOpen }) => {
+const AuthNav = (props) => {
+  const { avatarOpen, setAvatarOpen, menuOpen, setMenuOpen, user } = props
   return (
     <>
       <div className="lg:block hidden">
         <ul className="flex items-center space-x-5">
           <li>
-            <NavLink to="/manager" className="font-medium text-BlackGrey2">
+            <NavLink
+              to="/manager"
+              className="font-medium text-BlackGrey2"
+              onClick={() => props.refetch({})}
+            >
               Manager
             </NavLink>
           </li>
@@ -25,6 +30,7 @@ const AuthNav = ({ menuOpen, setMenuOpen, avatarOpen, setAvatarOpen }) => {
         avatarOpen={avatarOpen}
         setAvatarOpen={setAvatarOpen}
         setMenuOpen={setMenuOpen}
+        user={user}
       />
 
       <div className="lg:hidden block flex items-center">

@@ -24,6 +24,8 @@ const SignedIn = (props) => {
                   setMenuOpen={setMenuOpen}
                   avatarOpen={avatarOpen}
                   setAvatarOpen={setAvatarOpen}
+                  user={props.user}
+                  refetch={props.refetch}
                 />
               </section>
             </main>
@@ -37,6 +39,7 @@ const SignedIn = (props) => {
                     <NavLink
                       to="/manager"
                       className="font-medium text-BlackGrey2"
+                      onClick={() => props.refetch({})}
                     >
                       Manager
                     </NavLink>
@@ -55,7 +58,7 @@ const SignedIn = (props) => {
           )}
         </div>
         <div className="container flex justify-end mx-auto my-0.5">
-          {avatarOpen && <ProfileDropdown auth={props} />}
+          {avatarOpen && <ProfileDropdown auth={props} user={props.user} />}
         </div>
       </nav>
     </>

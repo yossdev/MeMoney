@@ -1,8 +1,12 @@
-import SignedOut from '../../components/NavBar/SignedOut'
 import { useAuth0 } from '@auth0/auth0-react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
-import inMemoryJWT from '../../jwt/inMemoryJWT'
+import { useDispatch } from 'react-redux'
+import { storeJwt } from '../../store/slice'
+
+import SignedOut from '../../components/NavBar/SignedOut'
+import Loading from '../../components/Loading'
+import Error from '../Errors/Error'
 
 const LandingPage = () => {
   document.title = 'Welcome'
@@ -13,7 +17,10 @@ const LandingPage = () => {
     loginWithRedirect,
     logout,
     isAuthenticated,
+    error,
   } = useAuth0()
+
+  const dispatch = useDispatch()
 
   useEffect(() => {
     ;(async () => {
@@ -23,23 +30,25 @@ const LandingPage = () => {
           audience: `https://${domain}/api/v2/`,
           scope: 'read:current_user',
         })
-        inMemoryJWT.setToken(accessToken)
+        // store accessToken
+        dispatch(storeJwt(accessToken))
+        localStorage.setItem('jwtToken', accessToken)
       } catch (e) {
-        console.error(e)
         console.log(e.message)
       }
     })()
-  }, [getAccessTokenSilently])
+  }, [dispatch, getAccessTokenSilently])
 
   // for redirect after successful login
-  // let navigate = useNavigate()
-  // useEffect(() => {
-  //   if (!isLoading && isAuthenticated) {
-  //     navigate('/manager')
-  //   }
-  // })
+  let navigate = useNavigate()
+  useEffect(() => {
+    if (!isLoading && isAuthenticated) {
+      navigate('/manager')
+    }
+  })
 
-  if (isLoading) return <div>Loading ...</div>
+  if (isLoading) return <Loading />
+  if (error) return <Error error={error} />
   return (
     <>
       <SignedOut

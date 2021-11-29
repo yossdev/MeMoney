@@ -1,11 +1,9 @@
-import user from '../../../assets/img/user.jpg'
-
-const Avatar = () => {
+const Avatar = (props) => {
   return (
     <>
       <img
-        src={user}
-        alt="user avatar"
+        src={props.user.picture}
+        alt="avatar"
         className="max-w-1 object-cover rounded-full"
       />
     </>
