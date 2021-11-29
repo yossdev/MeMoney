@@ -2,7 +2,7 @@ const Charts = () => {
   document.title = 'Charts'
   return (
     <>
-      <div>Charts Page</div>
+      <div className="text-center my-20 text-3xl">Coming soon...</div>
     </>
   )
 }

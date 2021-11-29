@@ -4,7 +4,38 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c20400-2a27-432f-a848-413a6c0e3151" name="Changes" comment="fix padding/margin modal" />
+    <list default="true" id="37c20400-2a27-432f-a848-413a6c0e3151" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/GraphQL/Query.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/404.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Loading.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Errors/Error.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/slice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Todo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OAuth/SignInWithGoogle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OAuth/SignOut.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OAuth/utils/refreshTokenSetup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OAuth/utils/verifyToken.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar/SignedIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/SignedIn.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar/components/AuthNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/components/AuthNav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar/components/Avatar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/components/Avatar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProfileDropdown/ProfileDropdownButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileDropdown/ProfileDropdownButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProfileDropdown/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileDropdown/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jwt/inMemoryJWT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Errors/Page404.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Errors/Page404.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage/About.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage/Welcome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage/Welcome.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MeMoneyDash/Charts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MeMoneyDash/Charts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MeMoneyDash/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MeMoneyDash/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProfilePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfilePage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +83,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\Alterra Fullstack Engineering\Frontend\Final Project\memoney\node_modules\prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -108,6 +139,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/memoney" />
+    </ignored-roots>
     <MESSAGE value=".idea" />
     <MESSAGE value="integrate MVP component" />
     <MESSAGE value="fix padding/margin modal" />

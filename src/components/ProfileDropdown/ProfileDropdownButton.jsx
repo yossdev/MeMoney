@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react'
 import Avatar from '../NavBar/components/Avatar'
 
-const ProfileDropdownButton = ({ avatarOpen, setAvatarOpen, setMenuOpen }) => {
+const ProfileDropdownButton = (props) => {
+  const { avatarOpen, setAvatarOpen, setMenuOpen, user } = props
   const drop = useRef(null)
 
   const handleClick = (e) => {
@@ -25,7 +26,7 @@ const ProfileDropdownButton = ({ avatarOpen, setAvatarOpen, setMenuOpen }) => {
   return (
     <div className="dropdown" ref={drop}>
       <button type="button" onClick={handleDropdown}>
-        <Avatar />
+        <Avatar user={user} />
       </button>
     </div>
   )
