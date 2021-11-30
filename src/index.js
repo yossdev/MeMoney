@@ -19,8 +19,8 @@ const httpLink = createHttpLink({
 
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
-  let obj = store.getState()
-  const token = obj.jwt.token
+  const obj = store.getState()
+  const token = obj.store.token
   // return the headers to the context so httpLink can read them
   return {
     headers: {

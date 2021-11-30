@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const slice = createSlice({
-  name: 'jwt',
+  name: 'store',
   initialState: {
     token: null,
+    budget: null,
   },
   reducers: {
     storeJwt: (state, action) => {
@@ -11,9 +12,13 @@ export const slice = createSlice({
     },
     clearJwt: (state) => {
       state.token = null
+      state.budget = null
+    },
+    storeBudget: (state, action) => {
+      state.budget = action.payload
     },
   },
 })
 
-export const { storeJwt, clearJwt } = slice.actions
+export const { storeJwt, clearJwt, storeBudget } = slice.actions
 export default slice.reducer

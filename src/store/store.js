@@ -14,7 +14,7 @@ import storage from 'redux-persist/lib/storage'
 import slice from './slice'
 
 const reducers = combineReducers({
-  jwt: slice,
+  store: slice,
 })
 
 const persistConfig = {

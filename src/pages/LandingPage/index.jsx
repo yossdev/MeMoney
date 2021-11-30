@@ -7,6 +7,7 @@ import { storeJwt } from '../../store/slice'
 import SignedOut from '../../components/NavBar/SignedOut'
 import Loading from '../../components/Loading'
 import Error from '../Errors/Error'
+import Footer from '../../components/Footer/Footer'
 
 const LandingPage = () => {
   document.title = 'Welcome'
@@ -59,6 +60,7 @@ const LandingPage = () => {
       <div>
         <Outlet />
       </div>
+      <Footer />
     </>
   )
 }

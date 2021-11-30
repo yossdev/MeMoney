@@ -7,6 +7,9 @@ import { GET_USER } from '../../GraphQL/Query'
 import SignedIn from '../../components/NavBar/SignedIn'
 import Loading from '../../components/Loading'
 import Error from '../Errors/Error'
+import { useDispatch } from 'react-redux'
+import { storeBudget } from '../../store/slice'
+import Footer from '../../components/Footer/Footer'
 
 const MeMoneyDash = () => {
   const { isLoading, logout, isAuthenticated } = useAuth0()
@@ -22,11 +25,14 @@ const MeMoneyDash = () => {
     }
   })
 
+  const dispatch = useDispatch()
+
   if (isLoading) return <Loading />
   if (loading) return <Loading />
   if (error) return <Error error={error} />
 
-  let user = data.users[0]
+  const user = data.users[0]
+  dispatch(storeBudget(user.budgets[0].id))
 
   return (
     <>
@@ -39,6 +45,7 @@ const MeMoneyDash = () => {
       <div>
         <Outlet />
       </div>
+      <Footer />
     </>
   )
 }
