@@ -4,7 +4,6 @@ export const slice = createSlice({
   name: 'store',
   initialState: {
     token: null,
-    budget: null,
   },
   reducers: {
     storeJwt: (state, action) => {
@@ -13,9 +12,6 @@ export const slice = createSlice({
     clearJwt: (state) => {
       state.token = null
       state.budget = null
-    },
-    storeBudget: (state, action) => {
-      state.budget = action.payload
     },
   },
 })

@@ -5,19 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37c20400-2a27-432f-a848-413a6c0e3151" name="Changes" comment="fix padding/margin modal">
-      <change afterPath="$PROJECT_DIR$/src/GraphQL/Mutation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GraphQL/payloadTest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GraphQL/Mutation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphQL/Mutation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GraphQL/Query.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphQL/Query.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditTransactionModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditTransactionModal/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NewTransactionModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewTransactionModal/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Transactions/ItemList/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/ItemList/Item.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Transactions/ItemList/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/ItemList/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Transactions/ManagerBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/ManagerBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Transactions/TransactionList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transactions/TransactionList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MeMoneyDash/Manager.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MeMoneyDash/Manager.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MeMoneyDash/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MeMoneyDash/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProfilePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfilePage/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/slice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/slice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +113,7 @@
       <workItem from="1638208363125" duration="1855000" />
       <workItem from="1638210983858" duration="191000" />
       <workItem from="1638211220948" duration="13046000" />
-      <workItem from="1638250018451" duration="8340000" />
+      <workItem from="1638250018451" duration="32367000" />
     </task>
     <servers />
   </component>

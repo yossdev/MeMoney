@@ -32,7 +32,12 @@ const ItemList = (props) => {
           {props.data
             .filter((v) => v.date === props.date)
             .map((data) => (
-              <Item key={data.id} data={data} money={data.money} />
+              <Item
+                key={data.id}
+                data={data}
+                money={data.money}
+                budgets={props.budgets}
+              />
             ))}
         </div>
       ) : (

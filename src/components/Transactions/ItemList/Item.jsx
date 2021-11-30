@@ -20,6 +20,7 @@ const Item = (props) => {
           <EditTransactionModal
             setIsComponentVisible={setIsComponentVisible}
             transaction={props.data}
+            budgets={props.budgets}
           />
         )}
       </div>

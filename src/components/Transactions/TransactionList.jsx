@@ -1,8 +1,4 @@
 import ItemList from './ItemList'
-import { useQuery } from '@apollo/client'
-import { GET_TRANSACTIONS } from '../../GraphQL/Query'
-import Loading from '../Loading'
-import Error from '../../pages/Errors/Error'
 
 // const transactions = [
 //   {
@@ -56,15 +52,8 @@ import Error from '../../pages/Errors/Error'
 //   },
 // ]
 
-const TransactionList = () => {
-  const { data, loading, error, refetch } = useQuery(GET_TRANSACTIONS, {
-    notifyOnNetworkStatusChange: true,
-  })
-
-  if (loading) return <Loading />
-  if (error) return <Error />
-  // console.log(data)
-  const transactions = data.users[0].budgets[0].transactions
+const TransactionList = (props) => {
+  const { transactions, budgets } = props
 
   const uniqueDates = [...new Set(transactions.map((v) => v.date))]
   const dates = uniqueDates.sort((a, b) => {
@@ -75,7 +64,12 @@ const TransactionList = () => {
   return (
     <>
       {dates.map((date) => (
-        <ItemList key={date} date={date} data={transactions} />
+        <ItemList
+          key={date}
+          date={date}
+          data={transactions}
+          budgets={budgets}
+        />
       ))}
     </>
   )

@@ -3,7 +3,9 @@ import FilterMonth from '../FilterMonth'
 import NewTransactionModal from '../NewTransactionModal'
 import useComponentVisible from '../../Hooks/useComponentVisible'
 
-const ManagerBar = () => {
+const ManagerBar = (props) => {
+  const { budgets } = props
+
   const { ref, isComponentVisible, setIsComponentVisible } =
     useComponentVisible(false)
 
@@ -32,7 +34,10 @@ const ManagerBar = () => {
 
       <div ref={ref}>
         {isComponentVisible && (
-          <NewTransactionModal setIsComponentVisible={setIsComponentVisible} />
+          <NewTransactionModal
+            setIsComponentVisible={setIsComponentVisible}
+            budgets={budgets}
+          />
         )}
       </div>
     </>

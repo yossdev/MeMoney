@@ -8,10 +8,6 @@ const GET_USER = gql`
       email
       picture
       created_at
-      budgets {
-        id
-        title
-      }
     }
   }
 `
@@ -20,12 +16,16 @@ const GET_TRANSACTIONS = gql`
   query MyQuery {
     users {
       budgets {
-        transactions {
+        id
+        title
+        transactions(distinct_on: id) {
           id
           memo
           money
           type
           date
+          expense_categories
+          income_categories
         }
       }
     }
