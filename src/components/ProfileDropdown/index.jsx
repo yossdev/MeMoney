@@ -11,7 +11,6 @@ const ProfileDropdown = (props) => {
 
   const handleSignOut = () => {
     dispatch(clearJwt())
-    localStorage.clear() // TODO
     logout()
   }
 

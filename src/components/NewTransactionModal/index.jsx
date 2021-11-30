@@ -1,19 +1,19 @@
 import { useState } from 'react'
-import { useSelector } from 'react-redux'
 import { useMutation } from '@apollo/client'
 import { INSERT_TRANSACTION } from '../../GraphQL/Mutation'
 import { GET_TRANSACTIONS } from '../../GraphQL/Query'
+
 import Error from '../../pages/Errors/Error'
 
-const NewTransactionModal = ({ setIsComponentVisible }) => {
+const NewTransactionModal = (props) => {
+  const { budgets, setIsComponentVisible } = props
+
   const curr = new Date()
   curr.setDate(curr.getDate())
   const date = curr.toISOString().substr(0, 10)
 
-  const budget = useSelector((state) => state.store.budget)
-
   const DefaultInput = {
-    budget_id: budget,
+    budget_id: budgets.id,
     type: 'Income',
     income_categories: 'Salary',
     expense_categories: 'Bills',
@@ -29,13 +29,11 @@ const NewTransactionModal = ({ setIsComponentVisible }) => {
     }
   )
 
-  const [types, setTypes] = useState(true)
   const [disabled, setDisabled] = useState(true)
   const [input, setInput] = useState(DefaultInput)
 
   const handleSelect = (e) => {
     handleOnChange(e)
-    setTypes(!types)
   }
 
   const handleOnChange = (e) => {
@@ -45,7 +43,7 @@ const NewTransactionModal = ({ setIsComponentVisible }) => {
     })
     // console.log('onchange', input)
 
-    if (input.type !== '' && input.memo.trim() !== '' && input.money !== 0) {
+    if (input.memo.trim() !== '' && input.money > 0) {
       setDisabled(false)
     }
   }
@@ -79,7 +77,7 @@ const NewTransactionModal = ({ setIsComponentVisible }) => {
         <div className="text-center font-semibold my-4">New Transaction</div>
 
         {loadingInsert ? (
-          <div>On process ..</div>
+          <div>On process ...</div>
         ) : (
           <>
             <table className="table-fixed">
@@ -93,8 +91,9 @@ const NewTransactionModal = ({ setIsComponentVisible }) => {
                         name="type"
                         className="bg-WhiteBG2 rounded-md px-2 py-1.5 mx-1 my-2"
                         onChange={handleSelect}
+                        defaultValue={'Income'}
                       >
-                        <option defaultValue="Income">Income</option>
+                        <option value="Income">Income</option>
                         <option value="Expenses">Expenses</option>
                       </select>
 
@@ -103,9 +102,10 @@ const NewTransactionModal = ({ setIsComponentVisible }) => {
                           id="income_categories"
                           name="income_categories"
                           className="bg-WhiteBG2 rounded-md px-2 py-1.5 mx-1 my-2"
+                          defaultValue={'Salary'}
                           onChange={handleOnChange}
                         >
-                          <option defaultValue="Salary">Salary</option>
+                          <option value="Salary">Salary</option>
                           <option value="Investment">Investment</option>
                           <option value="Awards">Awards</option>
                           <option value="Grants">Grants</option>
@@ -117,8 +117,9 @@ const NewTransactionModal = ({ setIsComponentVisible }) => {
                           name="expense_categories"
                           className="bg-WhiteBG2 rounded-md px-2 py-1.5 mx-1 my-2"
                           onChange={handleOnChange}
+                          defaultValue={'Bills'}
                         >
-                          <option defaultValue="Bills">Bills</option>
+                          <option value="Bills">Bills</option>
                           <option value="Food">Food</option>
                           <option value="Transportation">Transportation</option>
                           <option value="Entertainment">Entertainment</option>
@@ -185,7 +186,7 @@ const NewTransactionModal = ({ setIsComponentVisible }) => {
                 className="bg-BlackGrey1 p-1 px-3 mx-2 text-WhiteBG1 rounded-full"
                 onClick={() => setIsComponentVisible(false)}
               >
-                Cancel
+                Close
               </button>
               <button
                 type="button"
