@@ -5,45 +5,35 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import {
   ApolloClient,
-  ApolloLink,
   ApolloProvider,
-  concat,
-  HttpLink,
+  createHttpLink,
   InMemoryCache,
 } from '@apollo/client'
-// import { WebSocketLink } from '@apollo/client/link/ws'
-// import { getMainDefinition } from '@apollo/client/utilities'
 
-const appJWTToken = localStorage.getItem('jwtToken')
+import { setContext } from '@apollo/client/link/context'
+import { store } from './store/store'
 
-// With checking
-const httpLink = new HttpLink({ uri: process.env.REACT_APP_HASURA_URI })
-const authMiddleware = new ApolloLink((operation, forward) => {
-  if (appJWTToken) {
-    operation.setContext({
-      headers: {
-        Authorization: `Bearer ${appJWTToken}`,
-      },
-    })
+const httpLink = createHttpLink({
+  uri: process.env.REACT_APP_HASURA_URI,
+})
+
+const authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const obj = store.getState()
+  const token = obj.store.token
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
   }
-  return forward(operation)
 })
 
 const client = new ApolloClient({
-  link: concat(authMiddleware, httpLink),
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 })
-
-// Without checking
-// const client = new ApolloClient({
-//   uri: process.env.REACT_APP_HASURA_URI, //* change this with url endpoint form hasura
-//   headers: {
-//     'content-type': 'application/json',
-//     // 'x-hasura-admin-secret': process.env.REACT_APP_HASURA_ADMIN,
-//     Authorization: `Bearer ${appJWTToken}`,
-//   },
-//   cache: new InMemoryCache(),
-// })
 
 ReactDOM.render(
   <React.StrictMode>

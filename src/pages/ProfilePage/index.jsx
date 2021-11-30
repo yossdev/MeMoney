@@ -14,7 +14,7 @@ const ProfilePage = () => {
   if (loading) return <Loading />
   if (error) return <Error error={error} />
 
-  let user = data.users[0]
+  const user = data.users[0]
 
   return (
     <div>

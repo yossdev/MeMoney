@@ -16,4 +16,20 @@ const GET_USER = gql`
   }
 `
 
-export { GET_USER }
+const GET_TRANSACTIONS = gql`
+  query MyQuery {
+    users {
+      budgets {
+        transactions {
+          id
+          memo
+          money
+          type
+          date
+        }
+      }
+    }
+  }
+`
+
+export { GET_USER, GET_TRANSACTIONS }
