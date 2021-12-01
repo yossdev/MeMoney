@@ -5,11 +5,11 @@ Free Budgeting & Expense Tracker WebApp
 ## Tech Stack
 
 - ReactJS
-- Hasura
 - Tailwindcss
-- Heroku
-- Auth0
+- Hasura
 - Apollo/GraphQL
+- Auth0
 - React Redux
 - React Router DOM
-- ChartJS 2
+- [Rechart](https://recharts.org/)
+- Heroku

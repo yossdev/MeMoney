@@ -1,6 +1,6 @@
 module.exports = {
-  // enabled: true,
-  // mode: 'jit', // TODO Activate this for fast deployment
+  enabled: true,
+  mode: 'jit', // TODO Activate this for fast deployment
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
