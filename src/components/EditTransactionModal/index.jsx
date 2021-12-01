@@ -2,15 +2,19 @@ import { useState } from 'react'
 import { MdDeleteForever } from 'react-icons/md'
 import { useMutation } from '@apollo/client'
 import { DELETE_TRANSACTION, UPDATE_TRANSACTION } from '../../GraphQL/Mutation'
-import { GET_TRANSACTIONS } from '../../GraphQL/Query'
+import {
+  GET_TRANSACTIONS_BY_DATE,
+  GET_TRANSACTIONS_SUM_EXPENSES,
+  GET_TRANSACTIONS_SUM_INCOME,
+} from '../../GraphQL/Query'
 
 import Error from '../../pages/Errors/Error'
 
 const EditTransactionModal = (props) => {
-  const { setIsComponentVisible, transaction, budgets } = props
+  const { setIsComponentVisible, transaction } = props
 
   const DefaultEdit = {
-    budget_id: budgets.id,
+    budget_id: transaction.budget_id,
     type: transaction.type,
     income_categories: transaction.income_categories,
     expense_categories: transaction.expense_categories,
@@ -21,12 +25,22 @@ const EditTransactionModal = (props) => {
 
   const [editTransaction, { loading: loadingEdit, error: errorEdit }] =
     useMutation(UPDATE_TRANSACTION, {
-      refetchQueries: [GET_TRANSACTIONS],
+      refetchQueries: [
+        GET_TRANSACTIONS_BY_DATE,
+        GET_TRANSACTIONS_SUM_INCOME,
+        GET_TRANSACTIONS_SUM_EXPENSES,
+      ],
+      awaitRefetchQueries: true,
     })
 
   const [deleteTransaction, { loading: loadingDelete, error: errorDelete }] =
     useMutation(DELETE_TRANSACTION, {
-      refetchQueries: [GET_TRANSACTIONS],
+      refetchQueries: [
+        GET_TRANSACTIONS_BY_DATE,
+        GET_TRANSACTIONS_SUM_INCOME,
+        GET_TRANSACTIONS_SUM_EXPENSES,
+      ],
+      awaitRefetchQueries: true,
     })
 
   const [disabled, setDisabled] = useState(false)

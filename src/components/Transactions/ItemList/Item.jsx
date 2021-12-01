@@ -5,10 +5,6 @@ const Item = (props) => {
   const { ref, isComponentVisible, setIsComponentVisible } =
     useComponentVisible(false)
 
-  // const handleEditTransaction = (e) => {
-  //
-  // }
-
   return (
     <div className="flex justify-between py-1 px-4">
       <button type="button" onClick={setIsComponentVisible}>
@@ -20,7 +16,6 @@ const Item = (props) => {
           <EditTransactionModal
             setIsComponentVisible={setIsComponentVisible}
             transaction={props.data}
-            budgets={props.budgets}
           />
         )}
       </div>

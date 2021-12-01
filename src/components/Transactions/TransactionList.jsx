@@ -53,7 +53,7 @@ import ItemList from './ItemList'
 // ]
 
 const TransactionList = (props) => {
-  const { transactions, budgets } = props
+  const { transactions } = props
 
   const uniqueDates = [...new Set(transactions.map((v) => v.date))]
   const dates = uniqueDates.sort((a, b) => {
@@ -64,12 +64,7 @@ const TransactionList = (props) => {
   return (
     <>
       {dates.map((date) => (
-        <ItemList
-          key={date}
-          date={date}
-          data={transactions}
-          budgets={budgets}
-        />
+        <ItemList key={date} date={date} data={transactions} />
       ))}
     </>
   )

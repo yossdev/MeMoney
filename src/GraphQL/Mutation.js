@@ -24,4 +24,17 @@ const DELETE_TRANSACTION = gql`
   }
 `
 
-export { INSERT_TRANSACTION, UPDATE_TRANSACTION, DELETE_TRANSACTION }
+const UPDATE_BUDGETS_TITLE = gql`
+  mutation MyMutation($id: bigint!, $title: String!) {
+    update_budgets_by_pk(pk_columns: { id: $id }, _set: { title: $title }) {
+      title
+    }
+  }
+`
+
+export {
+  INSERT_TRANSACTION,
+  UPDATE_TRANSACTION,
+  DELETE_TRANSACTION,
+  UPDATE_BUDGETS_TITLE,
+}
