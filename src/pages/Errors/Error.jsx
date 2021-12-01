@@ -10,16 +10,23 @@ const Error = (props) => {
 
   console.log(error)
   return (
-    <div className="container mx-auto grid justify-center pt-16">
-      <h1>Sorry something went wrong ...</h1>
-      <p>Let's get back</p>
-      <button
-        className="bg-Red1 rounded-xl text-WhiteBG1"
-        type="button"
-        onClick={handleOK}
-      >
-        OK
-      </button>
+    <div className="min-h-screen">
+      <div className="container mx-auto grid justify-center mt-7">
+        <p className="text-center text-xl font-medium my-10">
+          Sorry something went wrong ... <br />
+          Let's get back or <b>Refresh the page.</b>
+        </p>
+
+        <div className="grid justify-center">
+          <button
+            type="button"
+            onClick={handleOK}
+            className="bg-Red1 text-lg font-semibold  text-WhiteBG1 rounded-full w-24 py-0.5"
+          >
+            OK
+          </button>
+        </div>
+      </div>
     </div>
   )
 }

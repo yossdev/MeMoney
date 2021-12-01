@@ -1,7 +1,7 @@
 import { HiMenu } from 'react-icons/hi'
 import { NavLink } from 'react-router-dom'
 
-const UnAuthNav = ({ menuOpen, setMenuOpen, auth }) => {
+const UnAuthNav = ({ menuOpen, setMenuOpen, auth, setIsActive, isActive }) => {
   const { isAuthenticated, loginWithRedirect, logout } = auth
 
   return (
@@ -9,7 +9,15 @@ const UnAuthNav = ({ menuOpen, setMenuOpen, auth }) => {
       <div className="lg:block hidden">
         <ul className="flex items-center space-x-5">
           <li>
-            <NavLink to="/" className="font-medium text-BlackGrey2">
+            <NavLink
+              to="/"
+              className={
+                isActive === '/'
+                  ? 'font-semibold text-Red1'
+                  : 'font-medium text-BlackGrey2'
+              }
+              onClick={() => setIsActive('/')}
+            >
               Welcome
             </NavLink>
           </li>
@@ -21,7 +29,15 @@ const UnAuthNav = ({ menuOpen, setMenuOpen, auth }) => {
             </li>
           )}
           <li>
-            <NavLink to="/about" className="font-medium text-BlackGrey2">
+            <NavLink
+              to="/about"
+              className={
+                isActive === '/about'
+                  ? 'font-semibold text-Red1'
+                  : 'font-medium text-BlackGrey2'
+              }
+              onClick={() => setIsActive('/about')}
+            >
               About
             </NavLink>
           </li>
@@ -31,7 +47,7 @@ const UnAuthNav = ({ menuOpen, setMenuOpen, auth }) => {
       {!isAuthenticated && (
         <button
           type="button"
-          className="p-1 px-2.5 rounded-full bg-Red1 text-WhiteBG1 font-medium text-WhiteBG1"
+          className="p-1 px-2.5 rounded-full bg-Red1  font-medium text-WhiteBG1"
           onClick={() => loginWithRedirect()}
         >
           Sign In
@@ -40,14 +56,14 @@ const UnAuthNav = ({ menuOpen, setMenuOpen, auth }) => {
       {isAuthenticated && (
         <button
           type="button"
-          className="p-1 px-2.5 rounded-full bg-Red1 text-WhiteBG1 font-medium text-WhiteBG1"
+          className="p-1 px-2.5 rounded-full bg-Red1  font-medium text-WhiteBG1"
           onClick={() => logout()}
         >
           Sign Out
         </button>
       )}
 
-      <div className="lg:hidden block flex items-center">
+      <div className="lg:hidden flex items-center">
         {/*Hamburger Menu*/}
         <button
           type="button"

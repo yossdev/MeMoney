@@ -41,12 +41,12 @@ const LandingPage = () => {
   }, [dispatch, getAccessTokenSilently])
 
   // for redirect after successful login
-  let navigate = useNavigate()
-  useEffect(() => {
-    if (!isLoading && isAuthenticated) {
-      navigate('/manager')
-    }
-  })
+  // let navigate = useNavigate()
+  // useEffect(() => {
+  //   if (!isLoading && isAuthenticated) {
+  //     navigate('/manager')
+  //   }
+  // })
 
   if (isLoading) return <Loading />
   if (error) return <Error error={error} />
@@ -57,9 +57,9 @@ const LandingPage = () => {
         logout={logout}
         isAuthenticated={isAuthenticated}
       />
-      <div>
+      <main>
         <Outlet />
-      </div>
+      </main>
       <Footer />
     </>
   )

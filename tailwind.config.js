@@ -1,6 +1,6 @@
 module.exports = {
-  // enabled: true,
-  // mode: 'jit', // TODO Activate this for fast deployment
+  enabled: true,
+  mode: 'jit', // TODO Activate this for fast deployment
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -17,6 +17,14 @@ module.exports = {
       Yellow1: '#F8C306',
       LightYellow1: '#FFFCF9',
       LightYellow2: '#FFF8EF',
+    },
+    minHeight: {
+      0: '0',
+      '1/4': '25%',
+      '1/2': '50%',
+      '3/4': '75%',
+      full: '100%',
+      screen: '90vh',
     },
     extend: {
       boxShadow: ['active'],

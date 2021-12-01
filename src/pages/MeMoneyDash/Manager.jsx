@@ -46,6 +46,7 @@ const Manager = () => {
         },
       },
     })
+    return year, month, lastDay
   }, [year, month, lastDay])
 
   const { data, loading, error, refetch } = useQuery(GET_TRANSACTIONS_BY_DATE, {
@@ -93,7 +94,7 @@ const Manager = () => {
 
   return (
     <>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 min-h-screen">
         <ManagerBar
           budgets={budgets}
           month={month}

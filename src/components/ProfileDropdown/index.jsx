@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { clearJwt } from '../../store/slice'
 
@@ -6,6 +6,7 @@ import Avatar from '../NavBar/components/Avatar'
 
 const ProfileDropdown = (props) => {
   const { isAuthenticated, logout } = props.auth
+  const { setIsActive, isActive } = props
 
   const dispatch = useDispatch()
 
@@ -24,9 +25,17 @@ const ProfileDropdown = (props) => {
       </div>
       <hr className="bg-BlackGrey1 h-0.5" />
       <div className="grid justify-items-center py-2.5">
-        <Link to="profile">
-          <h2 className="text-BlackGrey1 font-semibold py-2">Profile</h2>
-        </Link>
+        <NavLink
+          to="profile"
+          className={
+            isActive === '/manager/profile'
+              ? 'text-Red1 font-semibold py-2'
+              : 'text-BlackGrey1 font-semibold py-2'
+          }
+          onClick={() => setIsActive('/manager/profile')}
+        >
+          Profile
+        </NavLink>
         {isAuthenticated && (
           <button
             type="button"

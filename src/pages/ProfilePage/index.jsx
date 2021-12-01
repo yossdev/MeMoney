@@ -17,12 +17,29 @@ const ProfilePage = () => {
   const user = data.users[0]
 
   return (
-    <div>
-      <h1 className="text-center text-3xl font-medium mt-16">Profile</h1>
-      <img src={user.picture} className="rounded-full" alt="userPicture" />
-      <p>Nama: {user.name}</p>
-      <p>Email: {user.email}</p>
-      <p>Join: {user.created_at.slice(0, 10)}</p>
+    <div className="container mx-auto min-h-screen">
+      <h1 className="text-center text-3xl font-semibold text-BlackGrey1 my-10">
+        Profile
+      </h1>
+
+      <figure className="bg-LightYellow1 rounded-xl shadow-lg md:w-1/3 w-3/4 mx-auto py-10">
+        <img
+          className="w-36 h-36 rounded-full mx-auto"
+          src={user.picture}
+          alt="avatar"
+        />
+        <div className="flex-col pt-6 md:p-8 text-center space-y-4">
+          <p className="text-lg font-semibold">{user.name}</p>
+
+          <figcaption className="font-medium">
+            <p className="text-lg font-semibold py-3"> {user.email}</p>
+            <p className="text-lg font-semibold py-3">
+              <i className="text-sm">Join Date: </i>
+              {user.created_at.slice(0, 10)}
+            </p>
+          </figcaption>
+        </div>
+      </figure>
     </div>
   )
 }
