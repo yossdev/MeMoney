@@ -109,6 +109,8 @@ const GET_INCOME_EXPENSES_CATEGORIES_BY_MONTH = gql`
   ) {
     users {
       budgets(where: { id: $id }) {
+        id
+        title
         transactions(where: { date: $date }) {
           income_categories
           expense_categories

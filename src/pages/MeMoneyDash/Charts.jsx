@@ -69,6 +69,7 @@ const Charts = () => {
   if (error) return <Error />
 
   const dataQuery = data.users[0].budgets[0].transactions
+  const budgetTitle = data.users[0].budgets[0].title
 
   // income
   const salary = dataQuery
@@ -181,8 +182,10 @@ const Charts = () => {
   return (
     <div className="container mx-auto">
       <section className="py-5" />
-      <figure className="flex justify-center items-center bg-LightYellow2 px-5 py-3 mt-5 rounded-xl">
+      <figure className="flex justify-between items-center bg-LightYellow2 px-5 py-3 mt-5 rounded-xl">
+        <h1 className="text-BlackGrey1 font-medium">{budgetTitle}</h1>
         <FilterMonth month={month} year={year} handleChange={handleChange} />
+        <div />
       </figure>
 
       <div className="grid min-h-screen">
