@@ -12,3 +12,4 @@ Free Budgeting & Expense Tracker WebApp
 - Apollo/GraphQL
 - React Redux
 - React Router DOM
+- ChartJS 2

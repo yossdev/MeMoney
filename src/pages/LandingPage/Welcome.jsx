@@ -17,7 +17,7 @@ const Welcome = () => {
           <Artwork className="object-none lg:w-full w-3/4" />
         </div>
       </div>
-      <section className="bg-LightYellow2">
+      {/* <section className="bg-LightYellow2">
         <div className="container mx-auto">
           <h1 className="text-center">The Feature At A Glance</h1>
           <div className="flex justify-center">
@@ -54,7 +54,7 @@ const Welcome = () => {
       <section>
         <p>#Let's Manage Now!</p>
         <button type="button">Try now</button>
-      </section>
+      </section> */}
     </div>
   )
 }

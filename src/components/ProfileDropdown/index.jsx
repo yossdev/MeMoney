@@ -28,11 +28,11 @@ const ProfileDropdown = (props) => {
         <NavLink
           to="profile"
           className={
-            isActive === 'profile'
+            isActive === '/manager/profile'
               ? 'text-Red1 font-semibold py-2'
               : 'text-BlackGrey1 font-semibold py-2'
           }
-          onClick={() => setIsActive('profile')}
+          onClick={() => setIsActive('/manager/profile')}
         >
           Profile
         </NavLink>

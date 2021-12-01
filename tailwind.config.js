@@ -18,6 +18,14 @@ module.exports = {
       LightYellow1: '#FFFCF9',
       LightYellow2: '#FFF8EF',
     },
+    minHeight: {
+      0: '0',
+      '1/4': '25%',
+      '1/2': '50%',
+      '3/4': '75%',
+      full: '100%',
+      screen: '90vh',
+    },
     extend: {
       boxShadow: ['active'],
       maxWidth: {

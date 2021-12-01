@@ -15,8 +15,8 @@ const AuthNav = (props) => {
   } = props
 
   const handleManagerLink = () => {
-    setIsActive('manager')
-    props.refetch({})
+    setIsActive('/manager')
+    // props.refetch({})
   }
 
   return (
@@ -27,7 +27,7 @@ const AuthNav = (props) => {
             <NavLink
               to="/manager"
               className={
-                isActive === 'manager'
+                isActive === '/manager'
                   ? 'font-semibold text-Red1'
                   : 'font-medium text-BlackGrey2'
               }
@@ -40,11 +40,11 @@ const AuthNav = (props) => {
             <NavLink
               to="charts"
               className={
-                isActive === 'charts'
+                isActive === '/manager/charts'
                   ? 'font-semibold text-Red1'
                   : 'font-medium text-BlackGrey2'
               }
-              onClick={() => setIsActive('charts')}
+              onClick={() => setIsActive('/manager/charts')}
             >
               Charts
             </NavLink>
@@ -59,7 +59,7 @@ const AuthNav = (props) => {
         user={user}
       />
 
-      <div className="lg:hidden block flex items-center">
+      <div className="lg:hidden flex items-center">
         {/*Hamburger Menu*/}
         <button
           type="button"

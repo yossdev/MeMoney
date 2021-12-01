@@ -8,11 +8,11 @@ import { NavLink } from 'react-router-dom'
 const SignedIn = (props) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [avatarOpen, setAvatarOpen] = useState(false)
-  const [isActive, setIsActive] = useState('manager')
+  const [isActive, setIsActive] = useState(window.location.pathname)
 
   const handleManagerLink = () => {
-    setIsActive('manager')
-    props.refetch({})
+    setIsActive('/manager')
+    // props.refetch({})
   }
 
   return (
@@ -48,7 +48,7 @@ const SignedIn = (props) => {
                     <NavLink
                       to="/manager"
                       className={
-                        isActive === 'manager'
+                        isActive === '/manager'
                           ? 'font-semibold text-Red1'
                           : 'font-medium text-BlackGrey2'
                       }
@@ -61,11 +61,11 @@ const SignedIn = (props) => {
                     <NavLink
                       to="charts"
                       className={
-                        isActive === 'charts'
+                        isActive === '/manager/charts'
                           ? 'font-semibold text-Red1'
                           : 'font-medium text-BlackGrey2'
                       }
-                      onClick={() => setIsActive('charts')}
+                      onClick={() => setIsActive('/manager/charts')}
                     >
                       Charts
                     </NavLink>

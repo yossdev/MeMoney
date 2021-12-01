@@ -32,11 +32,11 @@ const UnAuthNav = ({ menuOpen, setMenuOpen, auth, setIsActive, isActive }) => {
             <NavLink
               to="/about"
               className={
-                isActive === 'about'
+                isActive === '/about'
                   ? 'font-semibold text-Red1'
                   : 'font-medium text-BlackGrey2'
               }
-              onClick={() => setIsActive('about')}
+              onClick={() => setIsActive('/about')}
             >
               About
             </NavLink>
@@ -47,7 +47,7 @@ const UnAuthNav = ({ menuOpen, setMenuOpen, auth, setIsActive, isActive }) => {
       {!isAuthenticated && (
         <button
           type="button"
-          className="p-1 px-2.5 rounded-full bg-Red1 text-WhiteBG1 font-medium text-WhiteBG1"
+          className="p-1 px-2.5 rounded-full bg-Red1  font-medium text-WhiteBG1"
           onClick={() => loginWithRedirect()}
         >
           Sign In
@@ -56,14 +56,14 @@ const UnAuthNav = ({ menuOpen, setMenuOpen, auth, setIsActive, isActive }) => {
       {isAuthenticated && (
         <button
           type="button"
-          className="p-1 px-2.5 rounded-full bg-Red1 text-WhiteBG1 font-medium text-WhiteBG1"
+          className="p-1 px-2.5 rounded-full bg-Red1  font-medium text-WhiteBG1"
           onClick={() => logout()}
         >
           Sign Out
         </button>
       )}
 
-      <div className="lg:hidden block flex items-center">
+      <div className="lg:hidden flex items-center">
         {/*Hamburger Menu*/}
         <button
           type="button"

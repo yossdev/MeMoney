@@ -6,7 +6,7 @@ import UnAuthNav from './components/UnAuthNav'
 
 const SignedOut = (props) => {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [isActive, setIsActive] = useState('/')
+  const [isActive, setIsActive] = useState(window.location.pathname)
 
   return (
     <nav className="sticky top-0 z-50">
@@ -59,11 +59,11 @@ const SignedOut = (props) => {
                   <NavLink
                     to="/about"
                     className={
-                      isActive === 'about'
+                      isActive === '/about'
                         ? 'font-semibold text-Red1'
                         : 'font-medium text-BlackGrey2'
                     }
-                    onClick={() => setIsActive('about')}
+                    onClick={() => setIsActive('/about')}
                   >
                     About
                   </NavLink>

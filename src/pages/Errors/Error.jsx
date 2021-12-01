@@ -13,7 +13,7 @@ const Error = (props) => {
     <div className="container mx-auto grid justify-center mt-7">
       <p className="text-center text-xl font-medium my-10">
         Sorry something went wrong ... <br />
-        Let's get back
+        Let's get back or <b>Refresh the page.</b>
       </p>
 
       <div className="grid justify-center">
