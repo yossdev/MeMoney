@@ -102,9 +102,27 @@ const GET_TRANSACTIONS_SUM_EXPENSES = gql`
   }
 `
 
+const GET_INCOME_EXPENSES_CATEGORIES_BY_MONTH = gql`
+  query MyQuery(
+    $id: bigint_comparison_exp = {}
+    $date: date_comparison_exp = {}
+  ) {
+    users {
+      budgets(where: { id: $id }) {
+        transactions(where: { date: $date }) {
+          income_categories
+          expense_categories
+          money
+        }
+      }
+    }
+  }
+`
+
 export {
   GET_USER,
   GET_TRANSACTIONS_BY_DATE,
   GET_TRANSACTIONS_SUM_INCOME,
   GET_TRANSACTIONS_SUM_EXPENSES,
+  GET_INCOME_EXPENSES_CATEGORIES_BY_MONTH,
 }
