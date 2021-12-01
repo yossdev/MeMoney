@@ -36,9 +36,9 @@ const MeMoneyDash = () => {
         user={user}
         refetch={refetch}
       />
-      <div>
+      <main>
         <Outlet />
-      </div>
+      </main>
       <Footer />
     </>
   )

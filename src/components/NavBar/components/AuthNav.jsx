@@ -4,7 +4,21 @@ import ProfileDropdownButton from '../../ProfileDropdown/ProfileDropdownButton'
 import { NavLink } from 'react-router-dom'
 
 const AuthNav = (props) => {
-  const { avatarOpen, setAvatarOpen, menuOpen, setMenuOpen, user } = props
+  const {
+    avatarOpen,
+    setAvatarOpen,
+    menuOpen,
+    setMenuOpen,
+    user,
+    isActive,
+    setIsActive,
+  } = props
+
+  const handleManagerLink = () => {
+    setIsActive('manager')
+    props.refetch({})
+  }
+
   return (
     <>
       <div className="lg:block hidden">
@@ -12,14 +26,26 @@ const AuthNav = (props) => {
           <li>
             <NavLink
               to="/manager"
-              className="font-medium text-BlackGrey2"
-              onClick={() => props.refetch({})}
+              className={
+                isActive === 'manager'
+                  ? 'font-semibold text-Red1'
+                  : 'font-medium text-BlackGrey2'
+              }
+              onClick={handleManagerLink}
             >
               Manager
             </NavLink>
           </li>
           <li>
-            <NavLink to="charts" className="font-medium text-BlackGrey2">
+            <NavLink
+              to="charts"
+              className={
+                isActive === 'charts'
+                  ? 'font-semibold text-Red1'
+                  : 'font-medium text-BlackGrey2'
+              }
+              onClick={() => setIsActive('charts')}
+            >
               Charts
             </NavLink>
           </li>

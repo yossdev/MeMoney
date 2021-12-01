@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 Todo.txt
+workspace.xml
+task.xml

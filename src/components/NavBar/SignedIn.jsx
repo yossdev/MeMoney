@@ -8,6 +8,12 @@ import { NavLink } from 'react-router-dom'
 const SignedIn = (props) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [avatarOpen, setAvatarOpen] = useState(false)
+  const [isActive, setIsActive] = useState('manager')
+
+  const handleManagerLink = () => {
+    setIsActive('manager')
+    props.refetch({})
+  }
 
   return (
     <>
@@ -26,6 +32,9 @@ const SignedIn = (props) => {
                   setAvatarOpen={setAvatarOpen}
                   user={props.user}
                   refetch={props.refetch}
+                  isActive={isActive}
+                  setIsActive={setIsActive}
+                  handleManagerLink={handleManagerLink}
                 />
               </section>
             </main>
@@ -38,8 +47,12 @@ const SignedIn = (props) => {
                   <li>
                     <NavLink
                       to="/manager"
-                      className="font-medium text-BlackGrey2"
-                      onClick={() => props.refetch({})}
+                      className={
+                        isActive === 'manager'
+                          ? 'font-semibold text-Red1'
+                          : 'font-medium text-BlackGrey2'
+                      }
+                      onClick={handleManagerLink}
                     >
                       Manager
                     </NavLink>
@@ -47,7 +60,12 @@ const SignedIn = (props) => {
                   <li>
                     <NavLink
                       to="charts"
-                      className="font-medium text-BlackGrey2"
+                      className={
+                        isActive === 'charts'
+                          ? 'font-semibold text-Red1'
+                          : 'font-medium text-BlackGrey2'
+                      }
+                      onClick={() => setIsActive('charts')}
                     >
                       Charts
                     </NavLink>
@@ -58,7 +76,14 @@ const SignedIn = (props) => {
           )}
         </div>
         <div className="container flex justify-end mx-auto my-0.5">
-          {avatarOpen && <ProfileDropdown auth={props} user={props.user} />}
+          {avatarOpen && (
+            <ProfileDropdown
+              auth={props}
+              user={props.user}
+              isActive={isActive}
+              setIsActive={setIsActive}
+            />
+          )}
         </div>
       </nav>
     </>

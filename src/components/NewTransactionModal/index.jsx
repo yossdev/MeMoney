@@ -8,6 +8,7 @@ import {
 } from '../../GraphQL/Query'
 
 import Error from '../../pages/Errors/Error'
+import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader'
 
 const NewTransactionModal = (props) => {
   const { budgets, setIsComponentVisible } = props
@@ -86,7 +87,9 @@ const NewTransactionModal = (props) => {
         <div className="text-center font-semibold my-4">New Transaction</div>
 
         {loadingInsert ? (
-          <div>On process ...</div>
+          <div className="flex justify-center items-center py-5">
+            <ClimbingBoxLoader color={'#FF9900'} loading={true} size={20} />
+          </div>
         ) : (
           <>
             <table className="table-fixed">
