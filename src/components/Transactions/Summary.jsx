@@ -1,16 +1,17 @@
-const Summary = () => {
+const Summary = (props) => {
+  const { sumIncome, sumExpense } = props
   const summary = [
     {
       key: 'Income',
-      money: 0,
+      money: sumIncome || 0,
     },
     {
       key: 'Expenses',
-      money: 0,
+      money: -sumExpense || 0,
     },
     {
       key: 'Balance',
-      money: 0,
+      money: sumIncome - sumExpense || 0,
     },
   ]
 

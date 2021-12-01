@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import { useMutation } from '@apollo/client'
 import { INSERT_TRANSACTION } from '../../GraphQL/Mutation'
-import { GET_TRANSACTIONS } from '../../GraphQL/Query'
+import {
+  GET_TRANSACTIONS_BY_DATE,
+  GET_TRANSACTIONS_SUM_EXPENSES,
+  GET_TRANSACTIONS_SUM_INCOME,
+} from '../../GraphQL/Query'
 
 import Error from '../../pages/Errors/Error'
 
@@ -25,7 +29,12 @@ const NewTransactionModal = (props) => {
   const [newTransaction, { loading: loadingInsert, error }] = useMutation(
     INSERT_TRANSACTION,
     {
-      refetchQueries: [GET_TRANSACTIONS],
+      refetchQueries: [
+        GET_TRANSACTIONS_BY_DATE,
+        GET_TRANSACTIONS_SUM_INCOME,
+        GET_TRANSACTIONS_SUM_EXPENSES,
+      ],
+      awaitRefetchQueries: true,
     }
   )
 
