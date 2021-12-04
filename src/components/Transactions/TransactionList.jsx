@@ -59,7 +59,7 @@ const TransactionList = (props) => {
   const dates = uniqueDates.sort((a, b) => {
     // Turn your strings into dates, and then subtract them
     // to get a value that is either negative, positive, or zero.
-    return new Date(b.date) - new Date(a.date)
+    return new Date(b) - new Date(a)
   })
   return (
     <>
