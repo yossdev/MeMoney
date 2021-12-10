@@ -1,4 +1,0 @@
-TODO - input money expense harus selalu negatif dan income positif (akan otomatis menyesuaikan angka)
-     - memo kosong akan otomatis menggunakan kategori
-     - fix YearMonthPicker error
-     - fix bug localStore can't get new value after login
